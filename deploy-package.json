@@ -1,0 +1,23 @@
+{
+  "name": "social-media-agent-dowgnut",
+  "version": "1.0.0",
+  "description": "LangChain Social Media Agent deployment for Dowgnut - AI content curation & scheduling",
+  "deployment": {
+    "platform": "railway",
+    "repo": "https://github.com/thisispuspango-byte/social-media-agent",
+    "branch": "deployment-setup",
+    "runtime": "node20",
+    "start_command": "npx @langchain/langgraph-cli dev --port 54367",
+    "env_required": ["ANTHROPIC_API_KEY", "ARCADE_API_KEY", "FIRECRAWL_API_KEY"],
+    "env_optional": ["LANGSMITH_API_KEY", "SUPABASE_URL", "SUPABASE_SERVICE_ROLE_KEY", "SLACK_BOT_TOKEN"],
+    "gpu_required": false,
+    "min_ram": "2GB",
+    "build_time": "5-10 min"
+  },
+  "dowgnut_usage": {
+    "content_types": ["AI-generated post captions from URLs", "Scheduled Twitter/LinkedIn posts about donut trends", "Content repurposing across platforms"],
+    "ai_features": ["Human-in-the-loop approval", "URL-to-post generation", "Multi-platform scheduling", "Content repurposer"],
+    "social_channels": ["Twitter/X", "LinkedIn", "Reddit"],
+    "estimated_cost": "$0-5/mo"
+  }
+}
